@@ -106,7 +106,7 @@ clickhousedb://{username}:{password}@{hostname}:{port}/{database}
 
 ## Screenshots
 
-![ClickHouse and Superset connection](http.....)
+![Connection clickhouse with superset](https://github.com/Sachidananda-17/DataZip/blob/main/images/datazip%202.png)
 
 
 
