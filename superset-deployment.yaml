@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: superset
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: superset
+  template:
+    metadata:
+      labels:
+        app: superset
+    spec:
+      containers:
+      - name: superset
+        image: apache/superset:latest
+        ports:
+        - containerPort: 8088
+        env:
+        - name: SUPERSET_LOAD_EXAMPLES
+          value: "no"
+        - name: SUPERSET_SECRET_KEY
+          value: "dc192a43bfce81e29cbee214ecefc7c875427fe9335f2109"
+        - name: SUPERSET_PORT
+          value: ""  # Explicitly unset any incorrect injected port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: superset
+spec:
+  type: NodePort
+  ports:
+  - port: 8088
+    targetPort: 8088
+  selector:
+    app: superset
