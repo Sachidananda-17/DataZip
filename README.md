@@ -64,7 +64,7 @@ Login to the superset portal using the credentials
 
 ## Screenshots
 
-![Sueper Set UI](http.....)
+![Sueper Set UI](https://github.com/Sachidananda-17/DataZip/blob/main/images/datazip%201.png)
 
 
 
